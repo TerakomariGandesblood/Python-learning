@@ -27,13 +27,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # https://github.com/actions/setup-python
-      - uses: actions/setup-python@v4
-        with:
-          python-version: "3.x"
+      # https://github.com/sksat/setup-rye
+      - uses: sksat/setup-rye@v0.7.0
 
       - name: Install black
-        run: pip install black
+        run: |
+          rye install black
+          rye sync
 
       - name: Run black
         run: black --check .
