@@ -32,7 +32,8 @@ jobs:
 
       - name: Install mypy and ruff
         run: |
-          rye install mypy ruff
+          rye install mypy
+          rye install ruff
           rye sync
 
       - name: Run mypy
