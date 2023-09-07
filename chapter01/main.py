@@ -1,3 +1,8 @@
 #!/usr/bin/env python3
 
-print("Hello World")
+import sys
+
+from loguru import logger
+
+if __name__ == "__main__":
+    logger.info(sys.prefix)
