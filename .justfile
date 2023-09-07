@@ -1,5 +1,5 @@
 fmt:
-    black .
+    rye run black .
     prettier --write .
     taplo fmt *toml
     just --fmt --unstable
@@ -9,6 +9,6 @@ update:
 
 check:
     pre-commit run --all-files
-    mypy .
-    ruff check .
+    rye run mypy .
+    rye run ruff check .
     autocorrect --lint

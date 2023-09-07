@@ -30,13 +30,11 @@ jobs:
       # https://github.com/sksat/setup-rye
       - uses: sksat/setup-rye@v0.7.0
 
-      - name: Install black
-        run: |
-          rye install black
-          rye sync
+      - name: Install dependencies
+        run: rye sync
 
       - name: Run black
-        run: black --check .
+        run: rye run black --check .
 
       - name: Install prettier
         run: npm install -g prettier
