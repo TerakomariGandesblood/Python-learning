@@ -31,7 +31,7 @@ jobs:
       - uses: sksat/setup-rye@v0.7.0
 
       - name: Install dependencies
-        run: rye sync
+        run: rye sync --no-lock
 
       - name: Run black
         run: rye run black --check .
