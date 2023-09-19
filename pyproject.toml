@@ -3,7 +3,7 @@ name = "python-learning"
 version = "0.1.0"
 description = "Python learning notes"
 authors = [{ name = "Terakomari", email = "im.terakomari@icloud.com" }]
-dependencies = ["loguru>=0.7.1"]
+dependencies = ["loguru>=0.7.1", "requests>=2.31.0"]
 readme = "README.md"
 requires-python = ">= 3.11"
 

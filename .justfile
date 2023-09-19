@@ -10,5 +10,5 @@ update:
 check:
     pre-commit run --all-files
     rye run mypy .
-    rye run ruff check .
+    rye run ruff .
     autocorrect --lint
