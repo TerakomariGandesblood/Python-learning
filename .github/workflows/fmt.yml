@@ -28,15 +28,16 @@ jobs:
         uses: actions/checkout@v4
 
       # https://github.com/sksat/setup-rye
-      - uses: sksat/setup-rye@v0.7.0
+      - name: Setup rye
+        uses: sksat/setup-rye@v0.9.1
 
-      - name: Install dependencies
+      - name: Setup dependencies
         run: rye sync --no-lock
 
-      - name: Run black
-        run: rye run black --check .
+      - name: Run ruff format
+        run: rye run ruff format --check .
 
-      - name: Install prettier
+      - name: Setup prettier
         run: npm install -g prettier
 
       - name: Run prettier

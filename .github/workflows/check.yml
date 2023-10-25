@@ -28,13 +28,14 @@ jobs:
         uses: actions/checkout@v4
 
       # https://github.com/sksat/setup-rye
-      - uses: sksat/setup-rye@v0.7.0
+      - name: Setup rye
+        uses: sksat/setup-rye@v0.9.1
 
-      - name: Install dependencies
+      - name: Setup dependencies
         run: rye sync --no-lock
 
-      - name: Run mypy
-        run: rye run mypy .
+      - name: Run pyright
+        run: rye run pyright .
 
       - name: Run ruff
-        run: rye run ruff .
+        run: rye run ruff check .
