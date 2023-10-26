@@ -18,5 +18,23 @@ allow-direct-references = true
 managed = true
 dev-dependencies = ["pyright>=1.1.332", "ruff>=0.1.2", "pytest>=7.4.3"]
 
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
 [tool.pyright]
-pythonVersion = "3.12"
+typeCheckingMode = "strict"
+
+# https://docs.astral.sh/ruff/linter/#rule-selection
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
