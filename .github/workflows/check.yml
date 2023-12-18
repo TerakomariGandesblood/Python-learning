@@ -27,9 +27,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # https://github.com/sksat/setup-rye
+      # https://github.com/eifinger/setup-rye
       - name: Setup rye
-        uses: sksat/setup-rye@v0.9.1
+        uses: eifinger/setup-rye@v1
+        with:
+          enable-cache: true
 
       - name: Setup dependencies
         run: rye sync --no-lock

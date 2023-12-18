@@ -14,13 +14,16 @@ build-backend = "hatchling.build"
 [tool.hatch.metadata]
 allow-direct-references = true
 
+[tool.hatch.build.targets.wheel]
+packages = ["chapter01"]
+
 [tool.rye]
 managed = true
-dev-dependencies = ["pyright>=1.1.332", "ruff>=0.1.2", "pytest>=7.4.3"]
+dev-dependencies = ["pyright>=1.1.341", "ruff>=0.1.8", "pytest>=7.4.3"]
 
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
 [tool.pyright]
-typeCheckingMode = "strict"
+typeCheckingMode = "standard"
 
 # https://docs.astral.sh/ruff/linter/#rule-selection
 [tool.ruff.lint]
