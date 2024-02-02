@@ -37,7 +37,7 @@ jobs:
         run: rye sync --no-lock
 
       - name: Run ruff format
-        run: rye run ruff format --check .
+        run: rye fmt --check
 
       - name: Setup prettier
         run: npm install -g prettier

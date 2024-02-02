@@ -5,6 +5,7 @@
 #   pre: false
 #   features: []
 #   all-features: false
+#   with-sources: false
 
 -e file:.
 loguru==0.7.2

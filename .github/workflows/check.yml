@@ -40,4 +40,4 @@ jobs:
         run: rye run pyright .
 
       - name: Run ruff
-        run: rye run ruff check .
+        run: rye lint
