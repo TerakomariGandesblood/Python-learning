@@ -29,7 +29,7 @@ jobs:
 
       # https://github.com/eifinger/setup-rye
       - name: Setup rye
-        uses: eifinger/setup-rye@v1
+        uses: eifinger/setup-rye@v2
         with:
           enable-cache: true
 
