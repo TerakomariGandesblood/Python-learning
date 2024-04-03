@@ -9,12 +9,17 @@
 
 -e file:.
 iniconfig==2.0.0
+    # via pytest
 loguru==0.7.2
+    # via python-learning
 nodeenv==1.8.0
-packaging==23.2
+    # via pyright
+packaging==24.0
+    # via pytest
 pluggy==1.4.0
-pyright==1.1.349
-pytest==8.0.0
-ruff==0.2.0
-# The following packages are considered to be unsafe in a requirements file:
-setuptools==69.0.3
+    # via pytest
+pyright==1.1.356
+pytest==8.1.1
+ruff==0.3.5
+setuptools==69.2.0
+    # via nodeenv
