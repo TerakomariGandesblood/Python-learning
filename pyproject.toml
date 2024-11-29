@@ -1,0 +1,29 @@
+# https://docs.astral.sh/uv/configuration/
+[tool.uv.workspace]
+members = ["basic/*"]
+
+# https://docs.astral.sh/ruff/configuration/
+[tool.ruff.lint]
+select = [
+  # Pyflakes
+  "F",
+  # pycodestyle
+  "E",
+  # isort
+  "I",
+  # pep8-naming
+  "N",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+]
+
+# https://microsoft.github.io/pyright/#/configuration
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[dependency-groups]
+dev = ["pyright>=1.1.389", "ruff>=0.8.1"]
