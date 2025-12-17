@@ -2,6 +2,9 @@
 [tool.uv.workspace]
 members = ["basic/*"]
 
+[dependency-groups]
+dev = ["ruff>=0.14.9", "ty>=0.0.2"]
+
 # https://docs.astral.sh/ruff/configuration/
 [tool.ruff.lint]
 select = [
@@ -9,6 +12,8 @@ select = [
   "F",
   # pycodestyle
   "E",
+  # pycodestyle warnings
+  "W",
   # isort
   "I",
   # pep8-naming
@@ -17,13 +22,10 @@ select = [
   "UP",
   # flake8-bugbear
   "B",
+  # flake8-comprehensions
+  "C4",
+  # flake8-quotes
+  "Q",
   # flake8-simplify
   "SIM",
 ]
-
-# https://microsoft.github.io/pyright/#/configuration
-[tool.pyright]
-typeCheckingMode = "strict"
-
-[dependency-groups]
-dev = ["pyright>=1.1.389", "ruff>=0.8.1"]

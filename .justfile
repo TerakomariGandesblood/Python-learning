@@ -1,4 +1,5 @@
 update:
+    prek auto-update
     uv lock --upgrade
     uv sync --all-extras --dev
 
@@ -9,6 +10,6 @@ fmt:
     just --fmt --unstable
 
 check:
-    pre-commit run --all-files
+    prek run --all-files
     uv run --frozen ruff check
-    uv run --frozen pyright
+    uv run --frozen ty check --error-on-warning
